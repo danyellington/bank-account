@@ -1,7 +1,11 @@
 var balance = 0;
 
-var transfer = function(amount, balance) {
+var transferAdd = function(amount, balance) {
   return amount + balance;
+}
+
+var transferSubtract = function(amount, balance) {
+  return balance - amount;
 }
 
 $(document).ready(function(){
@@ -16,8 +20,18 @@ $(document).ready(function(){
     event.preventDefault();
     $("#balance").empty();
     var amount = parseFloat($("input.transfer").val());
-    var newBalance = transfer(amount, balance);
-    balance = newBalance;
-    $("#balance").append("$" + newBalance)
+    var transferType = $("input:radio[name=transaction]:checked").val();
+    if (amount <= 0) {
+      alert("Please enter a number greater than 0");
+    } else if (transferType === "deposit") {
+      var newBalance = transferAdd(amount, balance);
+      balance = newBalance;
+    } else if (transferType === "withdrawl") {
+      var newBalance = transferSubtract(amount, balance);
+      balance = newBalance;
+    } else {
+      console.log("fuck");
+    }
+    $("#balance").append("$" + balance);
   })
 })
