@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <script src="js/jquery-1.12.0.js"></script>
+    <script src="js/scripts.js"></script>
+    <title>Bank of San Lorenzo</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Bank of San Lorenzo</h1>
+      <h2>Register a new account:</h2>
+      <form id="newAccount">
+        <div class="form-group">
+          <label for="name">Enter your name!</label>
+          <input type="text" class="form-control name">
+        </div>
+        <div class="form-group">
+          <label for="initialDeposit">Enter your initial deposit!</label>
+          <input type="number" class="form-control initialDeposit">
+        </div>
+        <button type="submit" class="btn btn-primary">Make a new account!</button>
+      </form>
+      <form id="transaction">
+        <h2>Would you like to deposit or withdrawl funds</h2>
+        <div class="radio">
+          <label>
+            <input type="radio" name="transaction" value="deposit">
+            Deposit
+          <label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" name="transaction" value="withdrawl">
+            Withdrawl
+          </label>
+        </div>
+        <div class="form-group">
+          <label for="transfer">How much would you like to transfer?</label>
+          <input type="number" class="form-control transfer">
+        </div>
+        <button type="submit" class="btn btn-primary">Transfer!</button>
+      </form>
+      <div class="jumbotron">
+        Current balance: <br><br><span id="balance"></span>
+      </div>
+    </div>
+  </body>
+</html>
