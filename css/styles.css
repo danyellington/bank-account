@@ -1,6 +1,31 @@
 .jumbotron {
   text-align: center;
-  color: lightgreen;
-  text-shadow: 2px 0 0 black, -2px 0 0 black, 0 2px 0 black, 0 -2px 0 black, 1px 1px black, -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black;
+  color: lightgreen !important;
   font-size: 20pt;
+  margin-bottom: 0px;
+   background-image: url("../img/money.png");
+   background-position: 0% 45%;
+   background-size: cover;
+   background-repeat: no-repeat;
+}
+
+button {
+  background: url("../img/twenty.jpeg") repeat center center !important;
+  background-size: repeat !important;
+  width: 15em;
+  height: 6em;
+  font-size: 15pt !important;
+  color: white !important;
+  font-size: 15px;
+  position: sticky;
+  text-shadow: 2px 0 0 black, -2px 0 0 black, 0 2px 0 black, 0 -2px 0 black, 1px 1px black, -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black !important;
+  border: 3px solid black !important;
+}
+
+body {
+  background: url("../img/vault.jpg") no-repeat center center fixed;
+  background-size: cover;
+  color: white;
+  text-shadow: 2px 0 0 black, -2px 0 0 black, 0 2px 0 black, 0 -2px 0 black, 1px 1px black, -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black;
+  font-size: 14pt;
 }
