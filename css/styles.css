@@ -33,3 +33,7 @@ body {
 input[type="number"] {
     width: 130px;
 }
+
+.red {
+  color: red;
+}

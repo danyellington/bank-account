@@ -17,7 +17,7 @@ $(document).ready(function(){
     $("#balance").empty();
     var initialDeposit = parseFloat($("input.initialDeposit").val());
     $("#balance").append("$" + initialDeposit);
-    var name = "Poop";
+    var name = $("input.name").val();
     newAccount = new Account(name, initialDeposit);
     balance = initialDeposit;
   })
@@ -38,6 +38,12 @@ $(document).ready(function(){
     } else {
       console.log("fuck");
     }
-    $("#balance").append("$" + newAccount.balance);
+    if (newAccount.balance < 0) {
+      $("#balance").addClass("red");
+    }
+    if (newAccount.balance > 0) {
+      $("#balance").removeClass("red");
+    }
+    $("#balance").append(newAccount.name + ", your blanace is $" + newAccount.balance);
   })
 })
